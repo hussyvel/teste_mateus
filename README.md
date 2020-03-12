@@ -9,7 +9,7 @@ Ruby 2.6.0
 
 Rails.6.0.2.1
 
-Postgresql
+Sqlite3
 
 Git
 
