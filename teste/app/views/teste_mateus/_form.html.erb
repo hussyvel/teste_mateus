@@ -1,0 +1,42 @@
+<%= form_with(model: teste_mateu, local: true) do |form| %>
+  <% if teste_mateu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(teste_mateu.errors.count, "error") %> prohibited this teste_mateu from being saved:</h2>
+
+      <ul>
+        <% teste_mateu.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_seq %>
+    <%= form.number_field :id_seq %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_area :descricao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.date_select :data %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

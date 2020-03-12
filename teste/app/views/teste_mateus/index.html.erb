@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Projetos Mateus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Id seq</th>
+      <th>Descrição do Projeto</th>
+      <th>Email</th>
+      <th>Data de Entrega</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teste_mateus.each do |teste_mateu| %>
+      <tr>
+        <td><%= teste_mateu.nome %></td>
+        <td><%= teste_mateu.id_seq %></td>
+        <td><%= teste_mateu.descricao %></td>
+        <td><%= teste_mateu.email %></td>
+        <td><%= teste_mateu.data %></td>
+        <td><%= link_to 'Mostrar', teste_mateu %></td>
+        <td><%= link_to 'Editar', edit_teste_mateu_path(teste_mateu) %></td>
+        <td><%= link_to 'Deletar Projeto', teste_mateu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Projeto Mateus', new_teste_mateu_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @teste_mateu.nome %>
+</p>
+
+<p>
+  <strong>Id seq:</strong>
+  <%= @teste_mateu.id_seq %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @teste_mateu.descricao %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @teste_mateu.email %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @teste_mateu.data %>
+</p>
+
+<%= link_to 'Edit', edit_teste_mateu_path(@teste_mateu) %> |
+<%= link_to 'Back', teste_mateus_path %>
